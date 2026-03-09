@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Paper background -->
+  <rect width="100" height="100" fill="#f2f0e9"/>
+  
+  <!-- Heavy black border -->
+  <rect x="0" y="0" width="100" height="100" fill="none" stroke="#1a1a1a" stroke-width="4"/>
+  
+  <!-- .ft text -->
+  <text x="50" y="65" font-family="'IBM Plex Mono', monospace" font-size="32" font-weight="700" fill="#1a1a1a" text-anchor="middle">.ft</text>
+  
+  <!-- Red accent line -->
+  <rect x="15" y="75" width="70" height="3" fill="#e63946"/>
+</svg>

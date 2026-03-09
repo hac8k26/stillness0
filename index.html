@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stillness.ft - Systems & UI Engineering Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Stillness.ft - Systems Architect specializing in Low-Level Kernel logic and High-Level Web interfaces. Expertise in Linux Kernel, C, Rust, Next.js, TypeScript, and WebAssembly.">
+    <meta name="keywords" content="systems architect, UI engineering, kernel development, web development, Linux, Rust, TypeScript, Next.js, WebAssembly, portfolio, stillness.ft">
+    <meta name="author" content="Stillness.ft">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Stillness.ft - Systems & UI Engineering Portfolio">
+    <meta property="og:description" content="Systems Architect bridging Low-Level Kernel logic and High-Level Web interfaces with surgical precision.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stillness0.netlify.app/">
+    <meta property="og:image" content="https://stillness0.netlify.app/joel-ellie.jpg">
+    <meta property="og:site_name" content="Stillness.ft">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stillness.ft - Systems & UI Engineering Portfolio">
+    <meta name="twitter:description" content="Systems Architect specializing in kernel development and modern web interfaces.">
+    <meta name="twitter:image" content="https://stillness0.netlify.app/joel-ellie.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stillness0.netlify.app/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@400;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #f2f0e9;
+            --ink: #1a1a1a;
+            --red: #e63946;
+            --blue: #0077b6;
+        }
+
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Space Grotesk', sans-serif;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png"); /* Subtle paper texture */
+        }
+
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+
+        .heavy-border { border: 2px solid var(--ink); }
+        
+        .column-divider {
+            border-left: 1px solid rgba(26, 26, 26, 0.1);
+        }
+
+        .category-label {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--red);
+        }
+
+        .btn-link:hover {
+            background-color: var(--ink);
+            color: var(--paper);
+        }
+        
+        /* Highlighting technical keywords */
+        .tech {
+            font-weight: 600;
+            border-bottom: 2px solid var(--blue);
+        }
+
+        /* Music player button */
+        .music-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--paper);
+            border: 3px solid var(--ink);
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 1000;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .music-btn:hover {
+            background-color: var(--ink);
+            color: var(--paper);
+        }
+
+        .music-btn:hover svg {
+            color: var(--paper);
+        }
+
+        .music-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Handwriting signature */
+        .signature-container {
+            margin-top: 3rem;
+            position: relative;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .signature-text {
+            font-family: 'Caveat', cursive;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: 2px;
+            text-align: center;
+            animation: blurToFocus 2s ease-out forwards;
+        }
+
+        @keyframes blurToFocus {
+            0% {
+                opacity: 0;
+                filter: blur(20px);
+                letter-spacing: 10px;
+            }
+            100% {
+                opacity: 1;
+                filter: blur(0);
+                letter-spacing: 2px;
+            }
+        }
+
+        /* Hand-drawn arrow */
+        .hand-drawn-arrow {
+            position: absolute;
+            left: 35%;
+            transform: translateX(-50%);
+            top: -50px;
+            width: 180px;
+            height: 95px;
+        }
+
+        @media (max-width: 768px) {
+            .hand-drawn-arrow {
+                left: 50%;
+                transform: translateX(-50%);
+                top: -50px;
+                width: 180px;
+                height: 95px;
+            }
+        }
+
+        .arrow-path {
+            fill: none;
+            stroke: var(--red);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: drawArrow 2s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .arrow-text {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            fill: var(--red);
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes drawArrow {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Terms and Privacy Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        .modal-content {
+            background-color: var(--paper);
+            border: 4px solid var(--ink);
+            max-width: 500px;
+            width: 90%;
+            padding: 2rem;
+            position: relative;
+            animation: slideUp 0.4s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-hidden {
+            display: none;
+        }
+
+        .accept-btn {
+            background-color: var(--ink);
+            color: var(--paper);
+            border: none;
+            padding: 0.75rem 2rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .accept-btn:hover {
+            background-color: var(--red);
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12 selection:bg-red-200">
+
+    <!-- Terms and Privacy Modal -->
+    <div id="termsModal" class="modal-overlay">
+        <div class="modal-content" style="position: relative;">
+            <!-- Accept annotation at top corner -->
+            <svg style="position: absolute; right: 10px; top: -70px; width: 150px; height: 180px;" viewBox="0 0 150 180" xmlns="http://www.w3.org/2000/svg">
+                <!-- "Accept" text at top -->
+                <text class="arrow-text" x="75" y="30" text-anchor="middle">Accept</text>
+                
+                <!-- Extended curved line pointing to button -->
+                <path class="arrow-path" d="
+                    M 75,35
+                    C 65,60 55,90 45,120
+                    C 40,135 35,150 30,165
+                " style="animation-delay: 0.5s;"/>
+            </svg>
+            
+            <div class="mono text-xs mb-4 text-red-600 font-bold uppercase tracking-widest italic">
+                [ Legal Notice ]
+            </div>
+            <h2 class="text-3xl font-bold mb-4 tracking-tight">Welcome to stillness.ft</h2>
+            <p class="text-sm text-gray-700 leading-relaxed mb-6">
+                By continuing to use this website, you agree to our Terms of Service and Privacy Policy. 
+                We use cookies to enhance your browsing experience and analyze site traffic.
+            </p>
+            <div class="flex gap-4 text-xs mb-6">
+                <a href="terms.html" target="_blank" class="text-blue-700 hover:underline mono">Read Terms of Service</a>
+                <span class="text-gray-400">|</span>
+                <a href="privacy.html" target="_blank" class="text-blue-700 hover:underline mono">Read Privacy Policy</a>
+            </div>
+            <button id="acceptBtn" class="accept-btn w-full">
+                Accept & Continue
+            </button>
+        </div>
+    </div>
+
+    <!-- Music Player -->
+    <audio id="bgMusic" loop>
+        <source src="The-Last-Of-us-Theme-Song.mp3" type="audio/mpeg">
+    </audio>
+    
+    <button id="musicBtn" class="music-btn" aria-label="Play/Pause Music">
+        <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+        <span id="musicText">Play_</span>
+    </button>
+
+    <div class="max-w-6xl mx-auto">
+        
+        <header class="grid grid-cols-1 md:grid-cols-12 gap-8 border-b-4 border-black pb-12">
+            <div class="md:col-span-7">
+                <div class="mono text-xs mb-4 text-red-600 font-bold uppercase tracking-widest italic">
+                    [ Document No. 2026-OS-FE ]
+                </div>
+                <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-none mb-6">
+                    SYSTEMS <br/> ARCHITECT.
+                </h1>
+                <p class="text-2xl font-light max-w-xl">
+                    Bridging the gap between <span class="tech">Low-Level Kernel</span> logic and <span class="tech">High-Level Web</span> interfaces with surgical precision.
+                </p>
+            </div>
+            <div class="md:col-span-5 flex flex-col justify-end items-start md:items-end">
+                <div class="text-left md:text-right space-y-1">
+                    <p class="mono text-sm font-bold">Stillness.ft </p>
+                    <p class="text-sm">VIsakhapatnam, Andhra Pradesh</p>
+                    <p class="text-sm font-bold text-blue-700 underline cursor-pointer">github.com/hac8k26</p>
+                    <p class="text-sm font-bold text-blue-700 underline cursor-pointer">linkedin.com/in/ram-0-6341373b6</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-12 mt-16 gap-12">
+            
+            <div class="md:col-span-6 flex gap-6">
+                <div class="category-label py-4">Kernel Space</div>
+                <div class="flex-1">
+                    <h3 class="text-3xl font-bold mb-6 italic underline">01_Hardware_Layer</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="mono text-sm font-bold mb-1">LINUX KERNEL / C / RUST</p>
+                            <p class="text-sm text-gray-600 leading-snug">Memory management, custom scheduling algorithms, and writing high-performance character drivers.</p>
+                        </div>
+                        <div>
+                            <p class="mono text-sm font-bold mb-1">POSIX / MULTITHREADING</p>
+                            <p class="text-sm text-gray-600 leading-snug">Optimization of race conditions and deadlock prevention in multi-core architectures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-6 flex gap-6 md:border-l border-black/10 md:pl-12">
+                <div class="category-label py-4">User Space</div>
+                <div class="flex-1">
+                    <h3 class="text-3xl font-bold mb-6 italic underline">02_Interface_Layer</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="mono text-sm font-bold mb-1">NEXT.JS / TYPESCRIPT / WASM</p>
+                            <p class="text-sm text-gray-600 leading-snug">Building highly reactive dashboards that visualize system-level data via WebAssembly and WebSockets.</p>
+                        </div>
+                        <div>
+                            <p class="mono text-sm font-bold mb-1">WEB PERFORMANCE</p>
+                            <p class="text-sm text-gray-600 leading-snug">Analyzing the Critical Rendering Path to reduce Time-to-Interactive for complex data tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-24">
+            <h2 class="text-xs font-bold uppercase tracking-[0.4em] mb-12 border-t border-black pt-4">Technical Logs / Selected Work</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-1 relative">
+                <!-- Hand-drawn line with "Click Here" text -->
+                <svg class="hand-drawn-arrow" viewBox="0 0 180 95" xmlns="http://www.w3.org/2000/svg">
+                    <!-- "Click Here" text at top -->
+                    <text class="arrow-text" x="90" y="20" text-anchor="middle">Click Here</text>
+                    
+                    <!-- Swirly curved line pointing to LOG_01 card -->
+                    <path class="arrow-path" d="
+                        M 90,25
+                        C 85,33 78,37 70,39
+                        C 62,41 54,39 50,35
+                        C 46,31 48,25 54,23
+                        C 60,21 66,25 64,31
+                        C 62,37 55,43 45,53
+                        C 38,61 32,70 28,80
+                    "/>
+                </svg>
+                
+                <a href="https://coree0.netlify.app/" target="_blank" class="bg-black text-white p-8 aspect-square flex flex-col justify-between group cursor-pointer hover:bg-blue-700 transition-colors">
+                    <span class="mono text-xs">LOG_01</span>
+                    <h4 class="text-4xl font-bold tracking-tighter">CORE_ <br/>E0_ <br/>PROJECT</h4>
+                    <p class="text-xs mono leading-tight">Interactive web application showcasing modern design and functionality with responsive UI.</p>
+                </a>
+
+                <div class="border-4 border-black p-8 aspect-square flex flex-col justify-between hover:bg-red-500 hover:text-white transition-colors cursor-pointer group">
+                    <span class="mono text-xs">LOG_02</span>
+                    <h4 class="text-4xl font-bold tracking-tighter">COMING_ <br/>SOON</h4>
+                    <p class="text-xs mono leading-tight">New project in development. Stay tuned for updates.</p>
+                </div>
+
+                <div class="border-4 border-black p-8 aspect-square flex flex-col justify-between hover:bg-black hover:text-white transition-colors cursor-pointer group">
+                    <span class="mono text-xs">LOG_03</span>
+                    <h4 class="text-4xl font-bold tracking-tighter">COMING_ <br/>SOON</h4>
+                    <p class="text-xs mono leading-tight">New project in development. Stay tuned for updates.</p>
+                </div>
+            </div>
+
+            <!-- Handwriting Animation -->
+            <div class="signature-container">
+                <span class="signature-text" id="handwriting">stillness.ft</span>
+            </div>
+        </section>
+
+        <footer class="mt-12 mb-12">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-8 relative">
+                <div class="max-w-sm">
+                    <div class="w-12 h-12 bg-red-600 mb-6"></div>
+                    <p class="text-sm font-bold italic uppercase tracking-tighter">System Readiness: 100%</p>
+                    <p class="text-xs text-gray-500 leading-tight mt-2">All assets rendered in 2.0.26. No trackers, no cookies, just raw performance engineering.</p>
+                </div>
+                <div class="flex flex-col items-end relative">
+                    <!-- Contact Me annotation with curved arrow line -->
+                    <svg class="contact-arrow" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg" style="position: absolute; right: 100%; top: 0px; width: 220px; height: 80px;">
+                        <!-- "Contact Me" text -->
+                        <text class="arrow-text" x="5" y="40" text-anchor="start">Contact Me</text>
+                        
+                        <!-- Curved arrow line starting right after "e" in "Me" -->
+                        <path class="arrow-path" d="
+                            M 125,38
+                            C 145,38 165,40 180,43
+                            C 195,46 205,48 212,50
+                        " style="animation-delay: 1s;"/>
+                        <!-- Arrow head -->
+                        <path class="arrow-path" d="
+                            M 212,50
+                            L 205,46
+                            M 212,50
+                            L 207,54
+                        " style="animation-delay: 1s;"/>
+                    </svg>
+                    
+                    <div class="flex gap-4 mb-4">
+                        <a href="https://github.com/hac8k26" target="_blank" class="hover:text-blue-700 transition-colors cursor-pointer">
+                            <i data-lucide="github" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ram-0-6341373b6/" target="_blank" class="hover:text-blue-700 transition-colors cursor-pointer">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="mailto:itsram.ft@gmail.com" class="hover:text-blue-700 transition-colors cursor-pointer">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <div class="mono text-xs uppercase font-bold bg-black text-white px-2 py-1">
+                        Initialize Connection_
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Terms and Privacy Policy -->
+            <div class="mt-12 pt-6 border-t border-black/20 text-center">
+                <div class="flex justify-center gap-6 text-xs mono">
+                    <a href="terms.html" class="hover:text-blue-700 transition-colors uppercase tracking-wider">Terms of Service</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="privacy.html" class="hover:text-blue-700 transition-colors uppercase tracking-wider">Privacy Policy</a>
+                </div>
+                <p class="text-xs text-gray-500 mt-4">© 2026 stillness.ft. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Terms and Privacy Modal
+        const termsModal = document.getElementById('termsModal');
+        const acceptBtn = document.getElementById('acceptBtn');
+        
+        // Check if user has already accepted
+        const hasAccepted = localStorage.getItem('termsAccepted');
+        
+        if (hasAccepted) {
+            termsModal.classList.add('modal-hidden');
+        }
+        
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('termsAccepted', 'true');
+            termsModal.classList.add('modal-hidden');
+            
+            // Auto-play music after accepting
+            music.play().then(() => {
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+                musicText.textContent = 'Pause_';
+            }).catch((error) => {
+                console.log('Autoplay prevented:', error);
+            });
+        });
+
+        // Auto-play music on page load
+        const music = document.getElementById('bgMusic');
+        const musicBtn = document.getElementById('musicBtn');
+        const playIcon = document.getElementById('playIcon');
+        const pauseIcon = document.getElementById('pauseIcon');
+        const musicText = document.getElementById('musicText');
+
+        // Attempt to autoplay if already accepted
+        if (hasAccepted) {
+            window.addEventListener('load', () => {
+                music.play().then(() => {
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                    musicText.textContent = 'Pause_';
+                }).catch((error) => {
+                    console.log('Autoplay prevented:', error);
+                });
+            });
+        }
+
+        musicBtn.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+                musicText.textContent = 'Pause_';
+            } else {
+                music.pause();
+                playIcon.style.display = 'block';
+                pauseIcon.style.display = 'none';
+                musicText.textContent = 'Play_';
+            }
+        });
+    </script>
+</body>
+</html>
