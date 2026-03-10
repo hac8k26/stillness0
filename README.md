@@ -307,13 +307,13 @@ Blur-to-focus effect
 
 ## 📜 License
 
-```
+````
 Copyright © 2026 Stillness.ft
 All Rights Reserved
 
 This portfolio is proprietary and confidential.
 Unauthorized copying or distribution is prohibited.
-```
+````
 
 ---
 
