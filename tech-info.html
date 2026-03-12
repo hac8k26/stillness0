@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Info | stillness.ft</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #f2f0e9;
+            --ink: #1a1a1a;
+            --red: #e63946;
+            --blue: #0077b6;
+        }
+
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Space Grotesk', sans-serif;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        
+        .tech-card {
+            border: 3px solid var(--ink);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0 var(--ink);
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-6xl mx-auto">
+        
+        <header class="border-b-4 border-black pb-8 mb-12">
+            <a href="index.html" class="mono text-xs text-blue-700 hover:underline mb-4 inline-block">← Back to Home</a>
+            <div class="mono text-xs mb-4 text-red-600 font-bold uppercase tracking-widest italic">
+                [ Technical Documentation ]
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-4">
+                TECH STACK
+            </h1>
+            <p class="text-lg text-gray-600">Complete technical specifications and tools used in this portfolio</p>
+        </header>
+
+        <!-- Frontend Technologies -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-red-600 pl-4">Frontend Technologies</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="tech-html5.html" class="tech-card bg-white p-6 cursor-pointer">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-red-600 flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">H5</span>
+                        </div>
+                        <h3 class="text-xl font-bold">HTML5</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Semantic markup with modern HTML5 features</p>
+                    <p class="mono text-xs text-blue-700">Version: Latest</p>
+                </a>
+
+                <a href="tech-css3.html" class="tech-card bg-white p-6 cursor-pointer">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-blue-600 flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">C3</span>
+                        </div>
+                        <h3 class="text-xl font-bold">CSS3</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Custom animations, grid, flexbox, and CSS variables</p>
+                    <p class="mono text-xs text-blue-700">Features: Animations, Grid, Flexbox</p>
+                </a>
+
+                <a href="tech-javascript.html" class="tech-card bg-white p-6 cursor-pointer">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-yellow-400 flex items-center justify-center">
+                            <span class="text-black font-bold text-xl">JS</span>
+                        </div>
+                        <h3 class="text-xl font-bold">JavaScript</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Vanilla JS for interactions and localStorage</p>
+                    <p class="mono text-xs text-blue-700">ES6+, No frameworks</p>
+                </a>
+
+                <a href="tech-tailwind.html" class="tech-card bg-white p-6 cursor-pointer">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-cyan-500 flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">TW</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Tailwind CSS</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Utility-first CSS framework via CDN</p>
+                    <p class="mono text-xs text-blue-700">Version: Latest CDN</p>
+                </a>
+
+                <a href="tech-svg.html" class="tech-card bg-white p-6 cursor-pointer">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-orange-500 flex items-center justify-center">
+                            <span class="text-white font-bold">SVG</span>
+                        </div>
+                        <h3 class="text-xl font-bold">SVG Graphics</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Custom animations and hand-drawn effects</p>
+                    <p class="mono text-xs text-blue-700">Inline SVG, Path animations</p>
+                </a>
+
+                <a href="tech-tools.html" class="tech-card bg-white p-6 cursor-pointer">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-purple-600 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">LIB</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Libraries</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Icons, audio, storage, and more</p>
+                    <p class="mono text-xs text-blue-700">Multiple tools integrated</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-red-600 pl-4">Typography System</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="tech-card bg-white p-6">
+                    <h3 class="text-2xl font-bold mb-3" style="font-family: 'Space Grotesk';">Space Grotesk</h3>
+                    <p class="text-sm text-gray-600 mb-3">Modern geometric sans-serif for headings and display text</p>
+                    <p class="mono text-xs">Weights: 300, 500, 700</p>
+                </div>
+
+                <div class="tech-card bg-white p-6">
+                    <h3 class="text-2xl font-bold mb-3 mono">IBM Plex Mono</h3>
+                    <p class="text-sm text-gray-600 mb-3">Monospace font for code and technical content</p>
+                    <p class="mono text-xs">Weights: 400, 600</p>
+                </div>
+
+                <div class="tech-card bg-white p-6">
+                    <h3 class="text-2xl font-bold mb-3" style="font-family: 'Caveat';">Caveat</h3>
+                    <p class="text-sm text-gray-600 mb-3">Handwriting font for annotations and signatures</p>
+                    <p class="mono text-xs">Weight: 700</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Palette -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-red-600 pl-4">Color Palette</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="tech-card bg-white p-6">
+                    <div class="w-full h-24 mb-4" style="background-color: #f2f0e9; border: 2px solid #1a1a1a;"></div>
+                    <h3 class="font-bold mb-2">Paper</h3>
+                    <p class="mono text-xs">#f2f0e9</p>
+                    <p class="text-xs text-gray-600 mt-2">Background</p>
+                </div>
+
+                <div class="tech-card bg-white p-6">
+                    <div class="w-full h-24 mb-4" style="background-color: #1a1a1a;"></div>
+                    <h3 class="font-bold mb-2">Ink</h3>
+                    <p class="mono text-xs">#1a1a1a</p>
+                    <p class="text-xs text-gray-600 mt-2">Text & Borders</p>
+                </div>
+
+                <div class="tech-card bg-white p-6">
+                    <div class="w-full h-24 mb-4" style="background-color: #e63946;"></div>
+                    <h3 class="font-bold mb-2">Red</h3>
+                    <p class="mono text-xs">#e63946</p>
+                    <p class="text-xs text-gray-600 mt-2">Accent 1</p>
+                </div>
+
+                <div class="tech-card bg-white p-6">
+                    <div class="w-full h-24 mb-4" style="background-color: #0077b6;"></div>
+                    <h3 class="font-bold mb-2">Blue</h3>
+                    <p class="mono text-xs">#0077b6</p>
+                    <p class="text-xs text-gray-600 mt-2">Accent 2</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Libraries -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-red-600 pl-4">Tools & Libraries</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="tech-card bg-white p-6">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="feather" class="w-5 h-5"></i>
+                        Lucide Icons
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-3">Beautiful, consistent icon library</p>
+                    <p class="mono text-xs text-blue-700">Usage: Social media icons, UI elements</p>
+                </div>
+
+                <div class="tech-card bg-white p-6">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="music" class="w-5 h-5"></i>
+                        Audio API
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-3">HTML5 Audio with custom controls</p>
+                    <p class="mono text-xs text-blue-700">Features: Auto-play, loop, play/pause</p>
+                </div>
+
+                <div class="tech-card bg-white p-6">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="database" class="w-5 h-5"></i>
+                        localStorage
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-3">Client-side storage for user preferences</p>
+                    <p class="mono text-xs text-blue-700">Usage: Terms acceptance tracking</p>
+                </div>
+
+                <div class="tech-card bg-white p-6">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                        SEO Tools
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-3">Sitemap, robots.txt, meta tags</p>
+                    <p class="mono text-xs text-blue-700">Google Search Console ready</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-red-600 pl-4">Performance Metrics</h2>
+            
+            <div class="tech-card bg-black text-white p-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-red-600 mb-2">95</div>
+                        <p class="text-sm">Performance</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-red-600 mb-2">98</div>
+                        <p class="text-sm">Accessibility</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-red-600 mb-2">100</div>
+                        <p class="text-sm">Best Practices</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-red-600 mb-2">100</div>
+                        <p class="text-sm">SEO</p>
+                    </div>
+                </div>
+                <p class="text-center mt-6 text-sm text-gray-400 mono">Lighthouse Scores</p>
+            </div>
+        </section>
+
+        <!-- Hosting -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-red-600 pl-4">Hosting & Deployment</h2>
+            
+            <div class="tech-card bg-white p-8">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-cyan-500 flex items-center justify-center text-white font-bold text-2xl">
+                        N
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">Netlify</h3>
+                        <p class="text-sm text-gray-600">Continuous deployment from Git</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div class="border-l-4 border-red-600 pl-4">
+                        <p class="font-bold mb-1">Deploy Time</p>
+                        <p class="mono text-sm text-gray-600">~30 seconds</p>
+                    </div>
+                    <div class="border-l-4 border-red-600 pl-4">
+                        <p class="font-bold mb-1">SSL</p>
+                        <p class="mono text-sm text-gray-600">Auto HTTPS</p>
+                    </div>
+                    <div class="border-l-4 border-red-600 pl-4">
+                        <p class="font-bold mb-1">CDN</p>
+                        <p class="mono text-sm text-gray-600">Global Edge Network</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-16 pt-8 border-t border-black/20 text-center">
+            <p class="text-sm text-gray-600 mb-4">Technical specifications for stillness.ft portfolio</p>
+            <a href="index.html" class="mono text-xs uppercase font-bold bg-black text-white px-4 py-2 inline-block hover:bg-red-600 transition-colors">
+                Back to Portfolio
+            </a>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

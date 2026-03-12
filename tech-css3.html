@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 - Tech Details | stillness.ft</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #f2f0e9;
+            --ink: #1a1a1a;
+            --red: #e63946;
+            --blue: #0077b6;
+        }
+
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Space Grotesk', sans-serif;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        
+        .code-block {
+            background-color: #1a1a1a;
+            color: #f2f0e9;
+            padding: 1.5rem;
+            border: 3px solid #e63946;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-5xl mx-auto">
+        
+        <header class="border-b-4 border-black pb-8 mb-12">
+            <a href="tech-info.html" class="mono text-xs text-blue-700 hover:underline mb-4 inline-block">← Back to Tech Stack</a>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-20 h-20 bg-blue-600 flex items-center justify-center">
+                    <span class="text-white font-bold text-3xl">C3</span>
+                </div>
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold tracking-tighter">CSS3</h1>
+                    <p class="text-lg text-gray-600 mono">Cascading Style Sheets</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Overview</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                CSS3 brings powerful styling capabilities including animations, transitions, grid layouts, flexbox, and custom properties (CSS variables). 
+                This portfolio leverages modern CSS3 features to create a brutalist design aesthetic with smooth interactions.
+            </p>
+            <p class="text-lg leading-relaxed">
+                Every animation, layout, and visual effect is crafted using pure CSS3 without relying on heavy JavaScript libraries, 
+                ensuring optimal performance and maintainability.
+            </p>
+        </section>
+
+        <!-- Key Features Used -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Key Features Used</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="zap" class="w-5 h-5 text-red-600"></i>
+                        CSS Variables
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Custom properties for consistent theming across the site
+                    </p>
+                    <div class="code-block mono text-xs">
+:root {<br/>
+  --paper: #f2f0e9;<br/>
+  --ink: #1a1a1a;<br/>
+  --red: #e63946;<br/>
+  --blue: #0077b6;<br/>
+}
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="move" class="w-5 h-5 text-red-600"></i>
+                        Animations
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Keyframe animations for signature, arrows, and effects
+                    </p>
+                    <div class="code-block mono text-xs">
+@keyframes blurToFocus {<br/>
+  0% { filter: blur(20px); }<br/>
+  100% { filter: blur(0); }<br/>
+}
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="grid-3x3" class="w-5 h-5 text-red-600"></i>
+                        Grid Layout
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        CSS Grid for responsive card layouts and sections
+                    </p>
+                    <div class="code-block mono text-xs">
+.grid {<br/>
+  display: grid;<br/>
+  grid-template-columns:<br/>
+    repeat(auto-fit,<br/>
+    minmax(300px, 1fr));<br/>
+}
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="box" class="w-5 h-5 text-red-600"></i>
+                        Flexbox
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Flexible layouts for header, footer, and components
+                    </p>
+                    <div class="code-block mono text-xs">
+.flex-container {<br/>
+  display: flex;<br/>
+  justify-content: space-between;<br/>
+  align-items: center;<br/>
+}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Details -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Implementation in This Portfolio</h2>
+            
+            <div class="bg-white border-3 border-black p-8">
+                <h3 class="text-2xl font-bold mb-4">Brutalist Design System</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Heavy Borders:</strong> 2-4px solid borders for strong visual hierarchy</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Paper Texture:</strong> Background image overlay for tactile feel</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Hover Effects:</strong> Transform and color transitions on interactive elements</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>SVG Animations:</strong> Stroke-dasharray for hand-drawn line effects</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Responsive Design:</strong> Mobile-first approach with breakpoints</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Best Practices Applied</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Performance</h3>
+                    <p class="text-sm">Hardware-accelerated transforms, minimal repaints</p>
+                </div>
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Maintainability</h3>
+                    <p class="text-sm">CSS variables for easy theme updates</p>
+                </div>
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Accessibility</h3>
+                    <p class="text-sm">Sufficient color contrast, focus states</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Learn More</h2>
+            
+            <div class="bg-white border-3 border-black p-6">
+                <ul class="space-y-3">
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="text-blue-700 hover:underline mono">
+                            → MDN Web Docs: CSS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://css-tricks.com/" target="_blank" class="text-blue-700 hover:underline mono">
+                            → CSS-Tricks
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://web.dev/learn/css/" target="_blank" class="text-blue-700 hover:underline mono">
+                            → Learn CSS (web.dev)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="mt-16 pt-8 border-t border-black/20 text-center">
+            <a href="tech-info.html" class="mono text-xs uppercase font-bold bg-black text-white px-4 py-2 inline-block hover:bg-red-600 transition-colors">
+                Back to Tech Stack
+            </a>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

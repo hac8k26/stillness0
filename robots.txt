@@ -4,5 +4,12 @@ Allow: /
 # Sitemap location
 Sitemap: https://stillness0.netlify.app/sitemap.xml
 
+# Allow all tech pages
+Allow: /tech-*.html
+
+# Allow legal pages
+Allow: /terms.html
+Allow: /privacy.html
+
 # Disallow specific files if needed
 # Disallow: /private/

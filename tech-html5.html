@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 - Tech Details | stillness.ft</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #f2f0e9;
+            --ink: #1a1a1a;
+            --red: #e63946;
+            --blue: #0077b6;
+        }
+
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Space Grotesk', sans-serif;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        
+        .code-block {
+            background-color: #1a1a1a;
+            color: #f2f0e9;
+            padding: 1.5rem;
+            border: 3px solid #e63946;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-5xl mx-auto">
+        
+        <header class="border-b-4 border-black pb-8 mb-12">
+            <a href="tech-info.html" class="mono text-xs text-blue-700 hover:underline mb-4 inline-block">← Back to Tech Stack</a>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-20 h-20 bg-red-600 flex items-center justify-center">
+                    <span class="text-white font-bold text-3xl">H5</span>
+                </div>
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold tracking-tighter">HTML5</h1>
+                    <p class="text-lg text-gray-600 mono">HyperText Markup Language</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Overview</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                HTML5 is the latest evolution of the standard that defines HTML. It includes new elements, attributes, and behaviors, 
+                and a larger set of technologies that allows the building of more diverse and powerful websites and applications.
+            </p>
+            <p class="text-lg leading-relaxed">
+                This portfolio uses semantic HTML5 markup to ensure accessibility, SEO optimization, and clean code structure. 
+                Every element is carefully chosen to represent its content meaningfully.
+            </p>
+        </section>
+
+        <!-- Key Features Used -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Key Features Used</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="layout" class="w-5 h-5 text-red-600"></i>
+                        Semantic Elements
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Using &lt;header&gt;, &lt;section&gt;, &lt;footer&gt;, &lt;nav&gt; for meaningful structure
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;header&gt;<br/>
+  &lt;h1&gt;Portfolio&lt;/h1&gt;<br/>
+&lt;/header&gt;<br/>
+&lt;section&gt;<br/>
+  &lt;article&gt;...&lt;/article&gt;<br/>
+&lt;/section&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="music" class="w-5 h-5 text-red-600"></i>
+                        Audio API
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Native audio playback with controls for background music
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;audio id="bgMusic" loop&gt;<br/>
+  &lt;source src="song.mp3"<br/>
+          type="audio/mpeg"&gt;<br/>
+&lt;/audio&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="image" class="w-5 h-5 text-red-600"></i>
+                        SVG Graphics
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Inline SVG for scalable, animated graphics and icons
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;svg viewBox="0 0 100 100"&gt;<br/>
+  &lt;circle cx="50" cy="50"<br/>
+          r="40" fill="red"/&gt;<br/>
+&lt;/svg&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="accessibility" class="w-5 h-5 text-red-600"></i>
+                        Accessibility
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        ARIA labels, semantic markup, and keyboard navigation
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;button<br/>
+  aria-label="Play Music"<br/>
+  role="button"&gt;<br/>
+  Play<br/>
+&lt;/button&gt;
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Details -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Implementation in This Portfolio</h2>
+            
+            <div class="bg-white border-3 border-black p-8">
+                <h3 class="text-2xl font-bold mb-4">Document Structure</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>DOCTYPE HTML5:</strong> Modern HTML5 doctype for standards mode</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Meta Tags:</strong> Comprehensive SEO and social media meta tags</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Semantic Sections:</strong> Proper use of header, main, section, footer</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Forms:</strong> Modal with proper form elements and validation</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Links:</strong> Proper use of anchor tags with target and rel attributes</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Best Practices Applied</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Validation</h3>
+                    <p class="text-sm">All HTML passes W3C validation standards</p>
+                </div>
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Performance</h3>
+                    <p class="text-sm">Minimal DOM depth, optimized loading</p>
+                </div>
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Accessibility</h3>
+                    <p class="text-sm">WCAG 2.1 compliant markup structure</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Learn More</h2>
+            
+            <div class="bg-white border-3 border-black p-6">
+                <ul class="space-y-3">
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="text-blue-700 hover:underline mono">
+                            → MDN Web Docs: HTML
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://html.spec.whatwg.org/" target="_blank" class="text-blue-700 hover:underline mono">
+                            → HTML Living Standard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" class="text-blue-700 hover:underline mono">
+                            → WCAG Guidelines
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="mt-16 pt-8 border-t border-black/20 text-center">
+            <a href="tech-info.html" class="mono text-xs uppercase font-bold bg-black text-white px-4 py-2 inline-block hover:bg-red-600 transition-colors">
+                Back to Tech Stack
+            </a>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

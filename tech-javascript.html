@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Tech Details | stillness.ft</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #f2f0e9;
+            --ink: #1a1a1a;
+            --red: #e63946;
+            --blue: #0077b6;
+        }
+
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Space Grotesk', sans-serif;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        
+        .code-block {
+            background-color: #1a1a1a;
+            color: #f2f0e9;
+            padding: 1.5rem;
+            border: 3px solid #e63946;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-5xl mx-auto">
+        
+        <header class="border-b-4 border-black pb-8 mb-12">
+            <a href="tech-info.html" class="mono text-xs text-blue-700 hover:underline mb-4 inline-block">← Back to Tech Stack</a>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-20 h-20 bg-yellow-400 flex items-center justify-center">
+                    <span class="text-black font-bold text-3xl">JS</span>
+                </div>
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold tracking-tighter">JavaScript</h1>
+                    <p class="text-lg text-gray-600 mono">ES6+ Vanilla JavaScript</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Overview</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                This portfolio uses vanilla JavaScript (ES6+) without any frameworks or heavy dependencies. 
+                The focus is on clean, performant code that handles user interactions, audio playback, and local storage.
+            </p>
+            <p class="text-lg leading-relaxed">
+                By avoiding frameworks, the site loads faster, has a smaller footprint, and demonstrates 
+                fundamental JavaScript skills that translate across any modern web development stack.
+            </p>
+        </section>
+
+        <!-- Key Features Used -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Key Features Used</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="database" class="w-5 h-5 text-red-600"></i>
+                        localStorage API
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Persistent storage for user preferences and consent
+                    </p>
+                    <div class="code-block mono text-xs">
+localStorage.setItem(<br/>
+  'termsAccepted', 'true'<br/>
+);<br/>
+const accepted =<br/>
+  localStorage.getItem(<br/>
+    'termsAccepted'<br/>
+  );
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="music" class="w-5 h-5 text-red-600"></i>
+                        Audio API
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Control background music playback with play/pause
+                    </p>
+                    <div class="code-block mono text-xs">
+const audio =<br/>
+  document.getElementById(<br/>
+    'bgMusic'<br/>
+  );<br/>
+audio.play();<br/>
+audio.pause();
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="mouse-pointer" class="w-5 h-5 text-red-600"></i>
+                        Event Listeners
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Handle user interactions with buttons and modals
+                    </p>
+                    <div class="code-block mono text-xs">
+button.addEventListener(<br/>
+  'click', () => {<br/>
+    // Handle click<br/>
+  }<br/>
+);
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="eye" class="w-5 h-5 text-red-600"></i>
+                        DOM Manipulation
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Dynamic content updates and style changes
+                    </p>
+                    <div class="code-block mono text-xs">
+element.classList.add(<br/>
+  'hidden'<br/>
+);<br/>
+element.style.display =<br/>
+  'none';
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Details -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Implementation in This Portfolio</h2>
+            
+            <div class="bg-white border-3 border-black p-8">
+                <h3 class="text-2xl font-bold mb-4">Core Functionality</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Terms Modal:</strong> First-visit detection and acceptance tracking</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Music Player:</strong> Toggle play/pause with icon and text updates</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Auto-play:</strong> Conditional music start based on user consent</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Icon Library:</strong> Initialize Lucide icons on page load</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Error Handling:</strong> Graceful fallbacks for autoplay restrictions</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Best Practices Applied</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Clean Code</h3>
+                    <p class="text-sm">Readable, maintainable vanilla JavaScript</p>
+                </div>
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Performance</h3>
+                    <p class="text-sm">No framework overhead, minimal bundle size</p>
+                </div>
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Progressive</h3>
+                    <p class="text-sm">Works without JS, enhanced with it</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Learn More</h2>
+            
+            <div class="bg-white border-3 border-black p-6">
+                <ul class="space-y-3">
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="text-blue-700 hover:underline mono">
+                            → MDN Web Docs: JavaScript
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://javascript.info/" target="_blank" class="text-blue-700 hover:underline mono">
+                            → The Modern JavaScript Tutorial
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://eloquentjavascript.net/" target="_blank" class="text-blue-700 hover:underline mono">
+                            → Eloquent JavaScript
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="mt-16 pt-8 border-t border-black/20 text-center">
+            <a href="tech-info.html" class="mono text-xs uppercase font-bold bg-black text-white px-4 py-2 inline-block hover:bg-red-600 transition-colors">
+                Back to Tech Stack
+            </a>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

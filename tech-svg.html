@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Graphics - Tech Details | stillness.ft</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #f2f0e9;
+            --ink: #1a1a1a;
+            --red: #e63946;
+            --blue: #0077b6;
+        }
+
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Space Grotesk', sans-serif;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        
+        .code-block {
+            background-color: #1a1a1a;
+            color: #f2f0e9;
+            padding: 1.5rem;
+            border: 3px solid #e63946;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-5xl mx-auto">
+        
+        <header class="border-b-4 border-black pb-8 mb-12">
+            <a href="tech-info.html" class="mono text-xs text-blue-700 hover:underline mb-4 inline-block">← Back to Tech Stack</a>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-20 h-20 bg-orange-500 flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">SVG</span>
+                </div>
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold tracking-tighter">SVG Graphics</h1>
+                    <p class="text-lg text-gray-600 mono">Scalable Vector Graphics</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Overview</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                SVG (Scalable Vector Graphics) is an XML-based vector image format that scales perfectly at any size. 
+                This portfolio uses inline SVG for hand-drawn annotations, curved arrows, and the favicon.
+            </p>
+            <p class="text-lg leading-relaxed">
+                SVG animations using stroke-dasharray and stroke-dashoffset create the hand-drawn effect 
+                that perfectly complements the brutalist design aesthetic.
+            </p>
+        </section>
+
+        <!-- Key Features Used -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Key Features Used</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="pen-tool" class="w-5 h-5 text-red-600"></i>
+                        Path Elements
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Curved lines using Bézier curves for hand-drawn look
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;path d="<br/>
+  M 90,25<br/>
+  C 85,33 78,37 70,39<br/>
+  C 62,41 54,39 50,35<br/>
+" /&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="zap" class="w-5 h-5 text-red-600"></i>
+                        Stroke Animation
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Drawing effect using dasharray and dashoffset
+                    </p>
+                    <div class="code-block mono text-xs">
+stroke-dasharray: 200;<br/>
+stroke-dashoffset: 200;<br/>
+animation: draw 2s<br/>
+  ease-out forwards;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="type" class="w-5 h-5 text-red-600"></i>
+                        Text Elements
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Handwriting font text within SVG graphics
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;text<br/>
+  x="90" y="20"<br/>
+  font-family="Caveat"<br/>
+  font-size="2rem"<br/>
+&gt;Click Here&lt;/text&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="maximize" class="w-5 h-5 text-red-600"></i>
+                        ViewBox
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Responsive scaling with viewBox attribute
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;svg<br/>
+  viewBox="0 0 180 95"<br/>
+  width="180"<br/>
+  height="95"<br/>
+&gt;
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Details -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Implementation in This Portfolio</h2>
+            
+            <div class="bg-white border-3 border-black p-8">
+                <h3 class="text-2xl font-bold mb-4">Hand-Drawn Annotations</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>"Click Here" Arrow:</strong> Curved line pointing to LOG_01 card</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>"Contact Me" Arrow:</strong> Line pointing to social media icons</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>"Accept" Arrow:</strong> Line in terms modal pointing to button</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Favicon:</strong> SVG logo with ".ft" branding</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Animation Timing:</strong> Delayed animations for sequential drawing</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Best Practices Applied</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Inline SVG</h3>
+                    <p class="text-sm">Direct HTML embedding for CSS control</p>
+                </div>
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Scalability</h3>
+                    <p class="text-sm">Perfect rendering at any screen size</p>
+                </div>
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Performance</h3>
+                    <p class="text-sm">Lightweight, no image downloads needed</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Learn More</h2>
+            
+            <div class="bg-white border-3 border-black p-6">
+                <ul class="space-y-3">
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank" class="text-blue-700 hover:underline mono">
+                            → MDN Web Docs: SVG
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://css-tricks.com/svg-line-animation-works/" target="_blank" class="text-blue-700 hover:underline mono">
+                            → SVG Line Animation Tutorial
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://jakearchibald.github.io/svgomg/" target="_blank" class="text-blue-700 hover:underline mono">
+                            → SVGOMG (SVG Optimizer)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="mt-16 pt-8 border-t border-black/20 text-center">
+            <a href="tech-info.html" class="mono text-xs uppercase font-bold bg-black text-white px-4 py-2 inline-block hover:bg-red-600 transition-colors">
+                Back to Tech Stack
+            </a>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

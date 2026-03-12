@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS - Tech Details | stillness.ft</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #f2f0e9;
+            --ink: #1a1a1a;
+            --red: #e63946;
+            --blue: #0077b6;
+        }
+
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Space Grotesk', sans-serif;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        
+        .code-block {
+            background-color: #1a1a1a;
+            color: #f2f0e9;
+            padding: 1.5rem;
+            border: 3px solid #e63946;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-5xl mx-auto">
+        
+        <header class="border-b-4 border-black pb-8 mb-12">
+            <a href="tech-info.html" class="mono text-xs text-blue-700 hover:underline mb-4 inline-block">← Back to Tech Stack</a>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-20 h-20 bg-cyan-500 flex items-center justify-center">
+                    <span class="text-white font-bold text-3xl">TW</span>
+                </div>
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold tracking-tighter">Tailwind CSS</h1>
+                    <p class="text-lg text-gray-600 mono">Utility-First CSS Framework</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Overview</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs. 
+                This portfolio uses Tailwind via CDN for rapid development and consistent spacing, sizing, and responsive design.
+            </p>
+            <p class="text-lg leading-relaxed">
+                The utility-first approach allows for quick prototyping while maintaining design consistency. 
+                Combined with custom CSS for unique brutalist elements, it creates a perfect balance.
+            </p>
+        </section>
+
+        <!-- Key Features Used -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Key Features Used</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="layout" class="w-5 h-5 text-red-600"></i>
+                        Responsive Grid
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Mobile-first responsive layouts with breakpoints
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;div class="<br/>
+  grid grid-cols-1<br/>
+  md:grid-cols-2<br/>
+  lg:grid-cols-3<br/>
+  gap-6<br/>
+"&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="box" class="w-5 h-5 text-red-600"></i>
+                        Flexbox Utilities
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Flexible layouts with alignment and spacing
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;div class="<br/>
+  flex<br/>
+  justify-between<br/>
+  items-center<br/>
+  gap-4<br/>
+"&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="palette" class="w-5 h-5 text-red-600"></i>
+                        Color System
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Predefined color palette with opacity variants
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;div class="<br/>
+  bg-black<br/>
+  text-white<br/>
+  border-red-600<br/>
+  hover:bg-blue-700<br/>
+"&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="type" class="w-5 h-5 text-red-600"></i>
+                        Typography
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Font sizes, weights, and text utilities
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;h1 class="<br/>
+  text-6xl<br/>
+  font-bold<br/>
+  tracking-tighter<br/>
+  leading-none<br/>
+"&gt;
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Details -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Implementation in This Portfolio</h2>
+            
+            <div class="bg-white border-3 border-black p-8">
+                <h3 class="text-2xl font-bold mb-4">Utility Classes Used</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Spacing:</strong> p-6, m-12, gap-8 for consistent padding and margins</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Layout:</strong> grid, flex, max-w-6xl for structure</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Responsive:</strong> md:, lg: prefixes for breakpoint-specific styles</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>States:</strong> hover:, focus:, group-hover: for interactions</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span><strong>Typography:</strong> text-6xl, font-bold, tracking-tighter for headings</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Best Practices Applied</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">CDN Delivery</h3>
+                    <p class="text-sm">Fast loading from global CDN network</p>
+                </div>
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Mobile-First</h3>
+                    <p class="text-sm">Base styles for mobile, enhanced for desktop</p>
+                </div>
+                <div class="bg-black text-white p-6">
+                    <h3 class="text-xl font-bold mb-3 text-red-600">Consistency</h3>
+                    <p class="text-sm">Unified spacing and sizing system</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Learn More</h2>
+            
+            <div class="bg-white border-3 border-black p-6">
+                <ul class="space-y-3">
+                    <li>
+                        <a href="https://tailwindcss.com/docs" target="_blank" class="text-blue-700 hover:underline mono">
+                            → Tailwind CSS Documentation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tailwindcss.com/docs/utility-first" target="_blank" class="text-blue-700 hover:underline mono">
+                            → Utility-First Fundamentals
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://play.tailwindcss.com/" target="_blank" class="text-blue-700 hover:underline mono">
+                            → Tailwind Play (Playground)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="mt-16 pt-8 border-t border-black/20 text-center">
+            <a href="tech-info.html" class="mono text-xs uppercase font-bold bg-black text-white px-4 py-2 inline-block hover:bg-red-600 transition-colors">
+                Back to Tech Stack
+            </a>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

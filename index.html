@@ -32,7 +32,6 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
@@ -202,6 +201,127 @@
             to {
                 opacity: 1;
             }
+        }
+
+        /* Red square glow animation */
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 5px #e63946, 0 0 10px #e63946, 0 0 15px #e63946;
+            }
+            50% {
+                box-shadow: 0 0 10px #e63946, 0 0 20px #e63946, 0 0 30px #e63946, 0 0 40px #e63946;
+            }
+        }
+
+        .glow-box {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        /* Animated animals */
+        .animal {
+            position: fixed;
+            font-size: 2rem;
+            pointer-events: none;
+            z-index: 100;
+            opacity: 0.7;
+        }
+
+        .butterfly1 {
+            animation: flyTopEdge 20s linear infinite;
+        }
+
+        .butterfly2 {
+            animation: flyBottomEdge 22s linear infinite;
+            animation-delay: 3s;
+        }
+
+        .bird1 {
+            animation: flyLeftEdge 18s linear infinite;
+        }
+
+        .bird2 {
+            animation: flyRightEdge 24s linear infinite;
+            animation-delay: 5s;
+        }
+
+        .bee {
+            animation: flyTopEdge2 16s linear infinite;
+            animation-delay: 8s;
+        }
+
+        /* Top edge movement */
+        @keyframes flyTopEdge {
+            0% {
+                top: 5%;
+                left: -10%;
+            }
+            100% {
+                top: 5%;
+                left: 110%;
+            }
+        }
+
+        @keyframes flyTopEdge2 {
+            0% {
+                top: 10%;
+                left: 110%;
+            }
+            100% {
+                top: 10%;
+                left: -10%;
+            }
+        }
+
+        /* Bottom edge movement */
+        @keyframes flyBottomEdge {
+            0% {
+                bottom: 5%;
+                left: 110%;
+            }
+            100% {
+                bottom: 5%;
+                left: -10%;
+            }
+        }
+
+        /* Left edge movement */
+        @keyframes flyLeftEdge {
+            0% {
+                top: -10%;
+                left: 5%;
+            }
+            100% {
+                top: 110%;
+                left: 5%;
+            }
+        }
+
+        /* Right edge movement */
+        @keyframes flyRightEdge {
+            0% {
+                top: 110%;
+                right: 5%;
+            }
+            100% {
+                top: -10%;
+                right: 5%;
+            }
+        }
+
+        /* Pulse animation for red box */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
+            }
+        }
+
+        .pulse-box {
+            animation: pulse 2s ease-in-out infinite;
         }
 
         /* Terms and Privacy Modal */
@@ -405,9 +525,11 @@
                 </a>
 
                 <div class="border-4 border-black p-8 aspect-square flex flex-col justify-between hover:bg-red-500 hover:text-white transition-colors cursor-pointer group">
-                    <span class="mono text-xs">LOG_02</span>
-                    <h4 class="text-4xl font-bold tracking-tighter">COMING_ <br/>SOON</h4>
-                    <p class="text-xs mono leading-tight">New project in development. Stay tuned for updates.</p>
+                    <a href="https://wilson0.netlify.app/" target="_blank" class="flex flex-col justify-between h-full">
+                        <span class="mono text-xs">LOG_02</span>
+                        <h4 class="text-4xl font-bold tracking-tighter">WILSON_ <br/>PROJECT</h4>
+                        <p class="text-xs mono leading-tight">Modern web application featuring clean design and interactive user experience.</p>
+                    </a>
                 </div>
 
                 <div class="border-4 border-black p-8 aspect-square flex flex-col justify-between hover:bg-black hover:text-white transition-colors cursor-pointer group">
@@ -426,7 +548,7 @@
         <footer class="mt-12 mb-12">
             <div class="flex flex-col md:flex-row justify-between items-end gap-8 relative">
                 <div class="max-w-sm">
-                    <div class="w-12 h-12 bg-red-600 mb-6"></div>
+                    <a href="tech-info.html" class="w-12 h-12 bg-red-600 mb-6 block hover:bg-black transition-colors cursor-pointer pulse-box" title="View Tech Stack"></a>
                     <p class="text-sm font-bold italic uppercase tracking-tighter">System Readiness: 100%</p>
                     <p class="text-xs text-gray-500 leading-tight mt-2">All assets rendered in 2.0.26. No trackers, no cookies, just raw performance engineering.</p>
                 </div>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap.xml - Tech Details | stillness.ft</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #f2f0e9;
+            --ink: #1a1a1a;
+            --red: #e63946;
+            --blue: #0077b6;
+        }
+
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Space Grotesk', sans-serif;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        
+        .code-block {
+            background-color: #1a1a1a;
+            color: #f2f0e9;
+            padding: 1.5rem;
+            border: 3px solid #e63946;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-5xl mx-auto">
+        
+        <header class="border-b-4 border-black pb-8 mb-12">
+            <a href="tech-info.html" class="mono text-xs text-blue-700 hover:underline mb-4 inline-block">← Back to Tech Stack</a>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-20 h-20 bg-green-600 flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">XML</span>
+                </div>
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold tracking-tighter">Sitemap.xml</h1>
+                    <p class="text-lg text-gray-600 mono">XML Sitemap Protocol</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Overview</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                A sitemap is an XML file that lists all important pages of a website, helping search engines like Google 
+                discover and index content more efficiently. It provides metadata about each page including last modification date, 
+                change frequency, and priority.
+            </p>
+            <p class="text-lg leading-relaxed">
+                This portfolio's sitemap includes the homepage, terms, and privacy pages, making it easier for search engines 
+                to crawl and understand the site structure.
+            </p>
+        </section>
+
+        <!-- Sitemap Content -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Current Sitemap</h2>
+            
+            <div class="code-block mono text-xs">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br/>
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;<br/>
+  &lt;url&gt;<br/>
+    &lt;loc&gt;https://stillness0.netlify.app/&lt;/loc&gt;<br/>
+    &lt;lastmod&gt;2026-03-09&lt;/lastmod&gt;<br/>
+    &lt;changefreq&gt;weekly&lt;/changefreq&gt;<br/>
+    &lt;priority&gt;1.0&lt;/priority&gt;<br/>
+  &lt;/url&gt;<br/>
+  &lt;url&gt;<br/>
+    &lt;loc&gt;https://stillness0.netlify.app/terms.html&lt;/loc&gt;<br/>
+    &lt;lastmod&gt;2026-03-09&lt;/lastmod&gt;<br/>
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;<br/>
+    &lt;priority&gt;0.5&lt;/priority&gt;<br/>
+  &lt;/url&gt;<br/>
+  &lt;url&gt;<br/>
+    &lt;loc&gt;https://stillness0.netlify.app/privacy.html&lt;/loc&gt;<br/>
+    &lt;lastmod&gt;2026-03-09&lt;/lastmod&gt;<br/>
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;<br/>
+    &lt;priority&gt;0.5&lt;/priority&gt;<br/>
+  &lt;/url&gt;<br/>
+&lt;/urlset&gt;
+            </div>
+        </section>
+
+        <!-- Key Elements -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Key Elements Explained</h2>
+            
+            <div class="grid grid-cols-1 gap-6">
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="link" class="w-5 h-5 text-red-600"></i>
+                        &lt;loc&gt; - Location
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        The full URL of the page. Must start with protocol (http/https) and end with trailing slash if applicable.
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;loc&gt;https://stillness0.netlify.app/&lt;/loc&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-5 h-5 text-red-600"></i>
+                        &lt;lastmod&gt; - Last Modified
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Date of last modification in YYYY-MM-DD format. Helps search engines prioritize fresh content.
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;lastmod&gt;2026-03-09&lt;/lastmod&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="refresh-cw" class="w-5 h-5 text-red-600"></i>
+                        &lt;changefreq&gt; - Change Frequency
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        How often the page is likely to change: always, hourly, daily, weekly, monthly, yearly, never.
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;changefreq&gt;weekly&lt;/changefreq&gt;
+                    </div>
+                </div>
+
+                <div class="border-3 border-black p-6 bg-white">
+                    <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="star" class="w-5 h-5 text-red-600"></i>
+                        &lt;priority&gt; - Priority
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        Relative priority of this URL (0.0 to 1.0). Homepage typically gets 1.0, other pages lower values.
+                    </p>
+                    <div class="code-block mono text-xs">
+&lt;priority&gt;1.0&lt;/priority&gt;
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">Implementation Details</h2>
+            
+            <div class="bg-white border-3 bord
