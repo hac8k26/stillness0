@@ -1,0 +1,35 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f2f0e9"/>
+  
+  <!-- Paper texture effect -->
+  <rect width="1200" height="630" fill="url(#noise)" opacity="0.05"/>
+  
+  <!-- Border -->
+  <rect x="20" y="20" width="1160" height="590" fill="none" stroke="#1a1a1a" stroke-width="8"/>
+  
+  <!-- Logo box -->
+  <rect x="100" y="150" width="200" height="200" fill="#f2f0e9" stroke="#1a1a1a" stroke-width="6"/>
+  <text x="200" y="270" font-family="monospace" font-size="80" font-weight="bold" text-anchor="middle" fill="#1a1a1a">.ft</text>
+  <line x1="120" y1="290" x2="280" y2="290" stroke="#e63946" stroke-width="4"/>
+  
+  <!-- Title -->
+  <text x="400" y="220" font-family="sans-serif" font-size="72" font-weight="bold" fill="#1a1a1a">STILLNESS.FT</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="290" font-family="sans-serif" font-size="32" fill="#1a1a1a">Systems Architect</text>
+  <text x="400" y="340" font-family="sans-serif" font-size="32" fill="#1a1a1a">UI Engineering Portfolio</text>
+  
+  <!-- Tech keywords -->
+  <text x="400" y="420" font-family="monospace" font-size="24" fill="#0077b6">Linux Kernel • Rust • TypeScript • WebAssembly</text>
+  
+  <!-- Bottom accent -->
+  <rect x="100" y="500" width="1000" height="6" fill="#e63946"/>
+  
+  <!-- Noise pattern definition -->
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" />
+    </filter>
+  </defs>
+</svg>
