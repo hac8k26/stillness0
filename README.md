@@ -11,12 +11,12 @@
 
 A brutalist-style portfolio website showcasing systems architecture and UI engineering expertise.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://stillness0.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://stillness0.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 🌐 Live Demo
 
-**[https://stillness0.netlify.app/](https://stillness0.netlify.app/)**
+**[https://stillness0.vercel.app/](https://stillness0.vercel.app/)**
 
 ## ✨ Features
 
@@ -55,8 +55,8 @@ A brutalist-style portfolio website showcasing systems architecture and UI engin
 - **Privacy Policy** - Data protection
 
 ### Hosting
-- **Netlify** - Continuous deployment from GitHub
-- **Custom Domain** - stillness0.netlify.app
+- **Vercel** - Continuous deployment from GitHub
+- **Custom Domain** - stillness0.vercel.app
 - **Auto HTTPS** - SSL certificate
 - **Global CDN** - Edge network delivery
 
@@ -175,8 +175,8 @@ Change fonts in the `<head>` section:
 
 ## 🔒 Privacy & Legal
 
-- Terms of Service: [terms.html](https://stillness0.netlify.app/terms.html)
-- Privacy Policy: [privacy.html](https://stillness0.netlify.app/privacy.html)
+- Terms of Service: [terms.html](https://stillness0.vercel.app/terms.html)
+- Privacy Policy: [privacy.html](https://stillness0.vercel.app/privacy.html)
 - No tracking or analytics
 - localStorage for consent only
 
@@ -233,7 +233,7 @@ For support, email itsram.ft@gmail.com or open an issue on GitHub.
 - Icons: Lucide Icons
 - Fonts: Google Fonts
 - Textures: Transparent Textures
-- Hosting: Netlify
+- Hosting: Vercel
 
 ---
 
@@ -241,6 +241,6 @@ For support, email itsram.ft@gmail.com or open an issue on GitHub.
 
 **Made with ❤️ by stillness.ft**
 
-[Website](https://stillness0.netlify.app/) • [GitHub](https://github.com/hac8k26) • [LinkedIn](https://www.linkedin.com/in/ram-0-6341373b6/)
+[Website](https://stillness0.vercel.app/) • [GitHub](https://github.com/hac8k26) • [LinkedIn](https://www.linkedin.com/in/ram-0-6341373b6/)
 
 </div>

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://stillness0.netlify.app/sitemap.xml
+Sitemap: https://stillness0.vercel.app/sitemap.xml
 
 # Allow all tech pages
 Allow: /tech-*.html

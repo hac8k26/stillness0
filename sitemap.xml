@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://stillness0.netlify.app/</loc>
+    <loc>https://stillness0.vercel.app/</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://stillness0.netlify.app/index.html</loc>
+    <loc>https://stillness0.vercel.app/index.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://stillness0.netlify.app/tech-info.html</loc>
+    <loc>https://stillness0.vercel.app/tech-info.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stillness0.netlify.app/tech-html5.html</loc>
+    <loc>https://stillness0.vercel.app/tech-html5.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillness0.netlify.app/tech-css3.html</loc>
+    <loc>https://stillness0.vercel.app/tech-css3.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillness0.netlify.app/tech-javascript.html</loc>
+    <loc>https://stillness0.vercel.app/tech-javascript.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillness0.netlify.app/tech-tailwind.html</loc>
+    <loc>https://stillness0.vercel.app/tech-tailwind.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillness0.netlify.app/tech-svg.html</loc>
+    <loc>https://stillness0.vercel.app/tech-svg.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillness0.netlify.app/tech-tools.html</loc>
+    <loc>https://stillness0.vercel.app/tech-tools.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillness0.netlify.app/terms.html</loc>
+    <loc>https://stillness0.vercel.app/terms.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://stillness0.netlify.app/privacy.html</loc>
+    <loc>https://stillness0.vercel.app/privacy.html</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
